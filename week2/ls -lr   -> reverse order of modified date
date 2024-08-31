@@ -1,0 +1,73 @@
+ls -lr   -> reverse order of modified date
+ls -l.  -> contents
+ls -s
+ls -lR |grep .js ---> grep all .js files
+ls *.json.  -> look for all json files in a directory
+ls zoo*. -> list all files machines zoo***
+ls ..     => all files names only
+
+cat filename => view file
+cat > f1.txt.  => update file
+cat >> f1.txt. => append in file
+
+touch f1.txt. -> create a new file
+
+
+mkdir test && cd test. => create & cd test
+
+
+mkdir -p  => recursively create dir
+mkdir -p d1
+mkdir -p d2
+
+
+mv f1 d1/newfilename. => move & update the file name
+
+cp -r dir. => copy direcrory with -r
+
+rm -r f1. => delete folder with -r
+
+
+chmod ugo permissions file name
+u=> user
+g=>group
+o=>others
+permissions -> rwx read write execute
+chmod u+x f1.txt
+chmod u-x f1.txt => revoke
+
+chmod 
+4 read
+write
+execute
+
+
+chmod 777 file name
+change no. as per permissions required
+
+
+echo => echos
+
+
+head filename. => top rows
+tailf1.txt => end rows
+can be used together to fetch particular portion from file
+
+
+grep => search
+grep "one" f1.txt 
+grep -c "" F1.TXT => count of occuring
+-h => for all matching cases
+-hi => ignore case
+-hir => across directories
+-hin => with line no.
+-hinw => match whole word
+-v => apart from given text
+
+
+
+sed 's/wht to replace/with what/' file name
+-ibackup => in new file
+
+
+awk '{}'
