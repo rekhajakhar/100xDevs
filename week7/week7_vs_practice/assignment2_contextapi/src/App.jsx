@@ -9,7 +9,7 @@ const [count, setCount] = useState(0);
   return (
     <div>
       <CountContext.Provider value={count}>
-     <Count count={count} setCount={setCount}/>
+     <Count setCount={setCount}/>
      </CountContext.Provider>
     </div>
   )
@@ -18,7 +18,7 @@ const [count, setCount] = useState(0);
 function Count({setCount}) {
 return <div>
   <CountRenderer />
-  <Buttons setCount={={setCount}}/>
+  <Buttons setCount={setCount}/>
 </div>
 }
 
