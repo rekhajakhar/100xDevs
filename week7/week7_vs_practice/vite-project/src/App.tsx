@@ -1,7 +1,11 @@
 
+//suspense api , render loading... till the component is not fetched from the backend..
+
+
 import { BrowserRouter, Routes, Route, useNavigate} from 'react-router-dom'
-import { Landing } from './components/Landing'
-import { Dashboard } from './components/Dashboard'; 
+import { lazy, Suspense } from "react";
+const Landing = lazy(() => import('./components/Landing'));
+const Dashboard = lazy(() => import("./components/Dashboard")); 
 
 function App() {
 
@@ -11,8 +15,8 @@ function App() {
     <BrowserRouter>
     <Appbar></Appbar>
     <Routes>
-      <Route path="/dashboard" element={<Dashboard />} />
-      <Route path="/" element={<Landing />} />
+      <Route path="/dashboard" element={<Suspense fallback={"loading..."}><Dashboard /></Suspense>} />
+      <Route path="/" element={<Suspense fallback={"loading..."}><Landing /></Suspense>} />
     </Routes>
     
     </BrowserRouter>
